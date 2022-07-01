@@ -53,12 +53,14 @@ class LedController:
     # Keyboard light device
     # Integrated Technology Express, Inc. ITE Device(8295)
     VENDOR = 0x048D
-    PRODUCT = 0xC965
+    PRODUCTS = [0xC965, 0xC975]
     EFFECT = {"static": 1, "breath": 3, "wave": 4, "hue": 6}
 
     def __init__(self):
-        device = usb.core.find(idVendor=self.VENDOR, idProduct=self.PRODUCT)
-
+        for PRODUCT in self.PRODUCTS:
+            device = usb.core.find(idVendor=self.VENDOR, idProduct=PRODUCT)
+            if device is not None:
+                break
         if device is None:
             raise ValueError("Light device not found")
 
