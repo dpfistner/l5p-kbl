@@ -12,7 +12,7 @@
 
 ### Regular python
 ```
-git clone https://github.com/imShara/l5p-kbl
+git clone git@github.com:dpfistner/l5p-kbl.git
 cd l5p-kbl
 python3 -m venv env
 source ./env/bin/activate
@@ -23,7 +23,7 @@ python3 l5p-kbl.py --help
 ### Archlinux
 ```
 sudo pacman -Sy python-pyusb
-git clone https://github.com/imShara/l5p-kbl
+git clone git@github.com:dpfistner/l5p-kbl.git
 cd l5p-kbl
 python l5p-kbl.py --help
 ```
@@ -44,7 +44,7 @@ python l5p-kbl.py --help
 Add udev rule if you want to swith light as unprivileged user
 ```
 # /etc/udev/rules.d/99-kblight.rules
-# change ProductID according to your lsusb output
+# change ATTR{idProduct}=="<Your Product ID>" according to your lsusb output
 SUBSYSTEM=="usb", ATTR{idVendor}=="048d", ATTR{idProduct}=="c975", MODE="0666"
 ```
 
