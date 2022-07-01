@@ -1,7 +1,8 @@
 ![Lenovo Legion 5 Pro 2021 Linux RGB Keyboard Light Controller](https://i.imgur.com/FhBMS9W.jpg)
 
 # Lenovo Legion 5 Pro 2021/ 5i Pro 2022 Linux RGB Keyboard Light Controller
-> This is a fork of https://github.com/imShara/l5p-kbl to support the newer 2022 Lenovo Legion 5i Pro Model
+> This is a fork of https://github.com/imShara/l5p-kbl to support the newer 2022 Lenovo Legion 5i Pro Model.
+> This could also work on other Models. Just add your Product ID to the `PRODUCTS` List in `l5p-kbl.py` and try it out.
 
 
 ## Requirements
