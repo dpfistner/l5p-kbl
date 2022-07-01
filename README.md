@@ -1,8 +1,8 @@
 ![Lenovo Legion 5 Pro 2021 Linux RGB Keyboard Light Controller](https://i.imgur.com/FhBMS9W.jpg)
 
-# Lenovo Legion 5 Pro 2021 Linux RGB Keyboard Light Controller
+# Lenovo Legion 5 Pro 2021/ 5i Pro 2022 Linux RGB Keyboard Light Controller
+> This is a fork of https://github.com/imShara/l5p-kbl to support the newer 2022 Lenovo Legion 5i Pro Model
 
-This util allows to drive RGB keyboard light on Lenovo Legion 5 Pro 2021 Laptop
 
 ## Requirements
 
@@ -28,12 +28,24 @@ cd l5p-kbl
 python l5p-kbl.py --help
 ```
 
-### Unprivileged usage
+### Fedora
+```
+sudo dnf install -y python3-pyusb
+git clone git@github.com:dpfistner/l5p-kbl.git
+cd l5p-kbl
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python l5p-kbl.py --help
+```
+
+### Unprivileged usage (Recommended)
 
 Add udev rule if you want to swith light as unprivileged user
 ```
 # /etc/udev/rules.d/99-kblight.rules
-SUBSYSTEM=="usb", ATTR{idVendor}=="048d", ATTR{idProduct}=="c965", MODE="0666"
+# change ProductID according to your lsusb output
+SUBSYSTEM=="usb", ATTR{idVendor}=="048d", ATTR{idProduct}=="c975", MODE="0666"
 ```
 
 Reload rules
