@@ -13,7 +13,7 @@
 
 ### Regular python
 ```
-git clone git@github.com:dpfistner/l5p-kbl.git
+git clone https://github.com/dpfistner/l5p-kbl.git
 cd l5p-kbl
 python3 -m venv env
 source ./env/bin/activate
