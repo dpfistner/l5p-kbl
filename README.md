@@ -24,7 +24,7 @@ python3 l5p-kbl.py --help
 ### Archlinux
 ```
 sudo pacman -Sy python-pyusb
-git clone git@github.com:dpfistner/l5p-kbl.git
+git clone https://github.com/dpfistner/l5p-kbl.git
 cd l5p-kbl
 python l5p-kbl.py --help
 ```
@@ -32,7 +32,7 @@ python l5p-kbl.py --help
 ### Fedora
 ```
 sudo dnf install -y python3-pyusb
-git clone git@github.com:dpfistner/l5p-kbl.git
+git clone https://github.com/dpfistner/l5p-kbl.git
 cd l5p-kbl
 python3 -m venv venv
 source venv/bin/activate
